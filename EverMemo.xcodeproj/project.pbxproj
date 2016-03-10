@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA58B445D7D8250B3676898C /* libPods-EverMemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A717C61B971F1DF39D61AD93 /* libPods-EverMemo.a */; };
 		FE7614461C91498200FEB862 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7614451C91498200FEB862 /* main.m */; };
 		FE7614491C91498300FEB862 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7614481C91498300FEB862 /* AppDelegate.m */; };
 		FE76144C1C91498300FEB862 /* EverMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE76144A1C91498300FEB862 /* EverMemo.xcdatamodeld */; };
@@ -15,9 +16,13 @@
 		FE7614551C91498300FEB862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7614531C91498300FEB862 /* Main.storyboard */; };
 		FE7614571C91498300FEB862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7614561C91498300FEB862 /* Assets.xcassets */; };
 		FE76145A1C91498300FEB862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7614581C91498300FEB862 /* LaunchScreen.storyboard */; };
+		FE7614631C9152B900FEB862 /* Memo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7614621C9152B900FEB862 /* Memo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04FDD1A84D022EFB2CCF570A /* Pods-EverMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverMemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EverMemo/Pods-EverMemo.release.xcconfig"; sourceTree = "<group>"; };
+		507F35AF96B03E63FFC9B261 /* Pods-EverMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverMemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EverMemo/Pods-EverMemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A717C61B971F1DF39D61AD93 /* libPods-EverMemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EverMemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7614411C91498200FEB862 /* EverMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EverMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7614451C91498200FEB862 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE7614471C91498300FEB862 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,6 +36,8 @@
 		FE7614561C91498300FEB862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE7614591C91498300FEB862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE76145B1C91498300FEB862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE7614611C9152B900FEB862 /* Memo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Memo.h; sourceTree = "<group>"; };
+		FE7614621C9152B900FEB862 /* Memo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Memo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA58B445D7D8250B3676898C /* libPods-EverMemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9156B174BA0EB16D8F6276AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A717C61B971F1DF39D61AD93 /* libPods-EverMemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA66721DF3CC89253E82055F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				507F35AF96B03E63FFC9B261 /* Pods-EverMemo.debug.xcconfig */,
+				04FDD1A84D022EFB2CCF570A /* Pods-EverMemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FE7614381C91498200FEB862 = {
 			isa = PBXGroup;
 			children = (
 				FE7614431C91498200FEB862 /* EverMemo */,
 				FE7614421C91498200FEB862 /* Products */,
+				FA66721DF3CC89253E82055F /* Pods */,
+				9156B174BA0EB16D8F6276AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +93,8 @@
 				FE7614471C91498300FEB862 /* AppDelegate.h */,
 				FE7614481C91498300FEB862 /* AppDelegate.m */,
 				FE76144D1C91498300FEB862 /* MasterViewController.h */,
+				FE7614611C9152B900FEB862 /* Memo.h */,
+				FE7614621C9152B900FEB862 /* Memo.m */,
 				FE76144E1C91498300FEB862 /* MasterViewController.m */,
 				FE7614501C91498300FEB862 /* DetailViewController.h */,
 				FE7614511C91498300FEB862 /* DetailViewController.m */,
@@ -94,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE76145E1C91498300FEB862 /* Build configuration list for PBXNativeTarget "EverMemo" */;
 			buildPhases = (
+				CF539CDB66C38296EE15C55C /* Check Pods Manifest.lock */,
 				FE76143D1C91498200FEB862 /* Sources */,
 				FE76143E1C91498200FEB862 /* Frameworks */,
 				FE76143F1C91498200FEB862 /* Resources */,
+				F8383DCCB3753BD51DC457F9 /* Embed Pods Frameworks */,
+				A6A2EB2EDACD607FCC846B7B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,12 +185,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A6A2EB2EDACD607FCC846B7B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EverMemo/Pods-EverMemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF539CDB66C38296EE15C55C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8383DCCB3753BD51DC457F9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EverMemo/Pods-EverMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FE76143D1C91498200FEB862 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FE7614521C91498300FEB862 /* DetailViewController.m in Sources */,
+				FE7614631C9152B900FEB862 /* Memo.m in Sources */,
 				FE76144F1C91498300FEB862 /* MasterViewController.m in Sources */,
 				FE7614491C91498300FEB862 /* AppDelegate.m in Sources */,
 				FE7614461C91498200FEB862 /* main.m in Sources */,
@@ -270,6 +351,7 @@
 		};
 		FE76145F1C91498300FEB862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 507F35AF96B03E63FFC9B261 /* Pods-EverMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EverMemo/Info.plist;
@@ -281,6 +363,7 @@
 		};
 		FE7614601C91498300FEB862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04FDD1A84D022EFB2CCF570A /* Pods-EverMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EverMemo/Info.plist;
@@ -309,6 +392,7 @@
 				FE7614601C91498300FEB862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
