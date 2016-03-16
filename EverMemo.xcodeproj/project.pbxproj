@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA58B445D7D8250B3676898C /* libPods-EverMemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A717C61B971F1DF39D61AD93 /* libPods-EverMemo.a */; };
+		CA58B445D7D8250B3676898C /* libPods-EverMemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A717C61B971F1DF39D61AD93 /* libPods-EverMemo.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		FE7614461C91498200FEB862 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7614451C91498200FEB862 /* main.m */; };
 		FE7614491C91498300FEB862 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7614481C91498300FEB862 /* AppDelegate.m */; };
 		FE76144C1C91498300FEB862 /* EverMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE76144A1C91498300FEB862 /* EverMemo.xcdatamodeld */; };
