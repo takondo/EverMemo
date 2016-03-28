@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A317774D58A195DEFC79AA90'
+               BlueprintIdentifier = '92D31DEA12A89CD72FB93B58'
                BlueprintName = 'Pods-EverMemo'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-EverMemo.a'>

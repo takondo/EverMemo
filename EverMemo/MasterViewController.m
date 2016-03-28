@@ -6,8 +6,10 @@
 //  Copyright © 2016年 0A3009. All rights reserved.
 //
 
+#import <Realm/Realm.h>
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "Memo.h"
 
 @interface MasterViewController ()
 
@@ -52,6 +54,29 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    
+    NSLog(@"insertNeObject before RealmTest");
+    
+    // Realm用モデルを生成
+    Memo *memo = [[Memo alloc] init];
+    // IDをランダム数値で登録
+    memo.mid = arc4random_uniform(10000);
+    // nameにIDを文字列化して登録
+    memo.name = [NSString stringWithFormat:@"%d", (int)memo.mid];
+    // textに日時を文字列化して登録
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"]]; // Localeの指定
+    [df setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+    memo.text = [df stringFromDate:[NSDate date]];
+    
+    // デフォルトのRealmを取得
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    // トランザクションを開始し書き込む
+    [realm beginWriteTransaction];
+    [realm addObject:memo];
+    [realm commitWriteTransaction];
+
+    NSLog(@"insertNeObject after RealmTest");
 }
 
 #pragma mark - Segues

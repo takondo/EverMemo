@@ -9,7 +9,9 @@
 #import <Realm/Realm.h>
 
 @interface Memo : RLMObject
-// <# Add properties here to define the model #>
+@property NSInteger mid;
+@property NSString *name;
+@property NSString *text;
 @end
 
 // This protocol enables typed collections. i.e.:
